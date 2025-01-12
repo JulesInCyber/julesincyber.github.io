@@ -3,16 +3,21 @@
 - type: github
   icon: "fab fa-github"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+- type: linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/julesincyber"
+
+- type: xing
+  icon: "fab fa-xing"
+  url: "https://www.xing.com/profile/Julian_Jung015493"
 
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
 
-- type: rss
-  icon: "fas fa-rss"
-  noblank: true
+#- type: rss
+#  icon: "fas fa-rss"
+#  noblank: true
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
