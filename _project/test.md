@@ -1,8 +1,8 @@
 ---
-layout: post
 title: "How to add custom Tabs"
-category: project
-exerpt: "How I managed to add a custom project page"
+date: 12-01-2025
+category: [project]
+tag: [project]
 ---
 
 ## Introduction
