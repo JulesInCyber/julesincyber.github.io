@@ -7,6 +7,7 @@ tags: [CTF, CrackingHashes, Cryptography, Forensics]
 
 ## Enumeration
 > Enumerate the machine and get all the important information
+
 ### Reconnaissance with NMAP
 We start by adding the target machine to `/etc/hosts` and enumerating the machine using NMAP
 ```shell
@@ -19,7 +20,6 @@ Looking at the NMAP results we can see that there are three open ports including
 - SSH on port 22
 - HTTP on port 80
 ```shell
-# Nmap 7.95 scan initiated Wed Feb 12 19:33:17 2025 as: /usr/lib/nmap/nmap --privileged -sC -sV -oA nmap/agent_sudo -vv agent.thm
 Nmap scan report for agent.thm (10.10.105.129)
 Host is up, received echo-reply ttl 63 (0.048s latency).
 Scanned at 2025-02-12 19:33:18 CET for 11s
@@ -43,7 +43,6 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 Read data files from: /usr/share/nmap
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Wed Feb 12 19:33:29 2025 -- 1 IP address (1 host up) scanned in 11.26 seconds
 ```
 
 ### Investigating the Website
