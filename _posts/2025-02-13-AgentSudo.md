@@ -45,6 +45,7 @@ Read data files from: /usr/share/nmap
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Wed Feb 12 19:33:29 2025 -- 1 IP address (1 host up) scanned in 11.26 seconds
 ```
+
 ### Investigating the Website
 When visiting `http://agent.thm` we can see the following message  
 
@@ -75,6 +76,7 @@ When visiting `http://agent.thm/agent_C_attention.php` we receive this message:
 ![Attention Chris](assets/img/AgentSudo_AttentionChris.png)
 
 which gives us `chris` as a username
+
 ## Hash Cracking and Brute-Force
 We start off by trying to brute-force into `ftp` using *Hydra*.
 As we know from the message chris' password is weak so `rockyou.txt` might do the trick
