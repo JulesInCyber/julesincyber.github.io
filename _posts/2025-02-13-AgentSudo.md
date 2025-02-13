@@ -19,6 +19,7 @@ Looking at the NMAP results we can see that there are three open ports including
 - FTP on port 21
 - SSH on port 22
 - HTTP on port 80
+
 ```shell
 Nmap scan report for agent.thm (10.10.105.129)
 Host is up, received echo-reply ttl 63 (0.048s latency).
