@@ -1,5 +1,5 @@
 ---
-title: 
+title: Investigating Windows
 date: 04.03.2025
 categories:
   - CaptureTheFlag
