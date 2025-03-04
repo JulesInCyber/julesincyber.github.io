@@ -21,7 +21,7 @@ xfreerdp /u:Administrator /p:letmein123! /v:<MACHINE-IP> /dynamic-resolution
 ## Investigating the System
 ### Windows Version and Year
 I used PowerShell to get the needed information of the machine
-```Powershell
+```powershell
 Get-ComputerInfo -Property OSName, WindowsVersion
 ```
 Turns out, we are dealing with a Windows Server 2016
