@@ -11,7 +11,7 @@
   noblank: true # open link in current tab
 
 - type: linkedin
-  icon: 'fab fa-linkedein'
+  icon: 'fab fa-linkedin'
   url: 'https://linkedin.com/in/julesincyber'
 
 - type: rss
