@@ -3,6 +3,7 @@ layout: post
 title: SUID Misconfiguration
 categories: [Know-How]
 tags: [linux, security]
+image: /assets/img/theory.png
 ---
 
 ## What is SUID?
