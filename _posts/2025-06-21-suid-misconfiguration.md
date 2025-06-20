@@ -1,11 +1,14 @@
 ---
 layout: post
 title: SUID Misconfiguration
-categories: [Know-How]
-tags: [linux, security]
-image: /assets/img/theory.png
+categories:
+- Know-How
+tags:
+- linux
+- security
+image: "/assets/img/theory.png"
+date: 2025-06-21 00:00 +0000
 ---
-
 ## What is SUID?
 
 The **Set User ID** is a special permission bit used in UNIX systems that applies to executable files.
