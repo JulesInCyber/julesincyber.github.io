@@ -2,7 +2,7 @@
 layout: post
 title: Ph4nt0m 1ntrud3r
 categories: [picoCTF, Forensics]
-tags: [wireshark, network, pcap, decoding]
+tags: [wireshark, network, pcap, decoding, cyberchef]
 image: assets/img/picoCFT.png
 ---
 
@@ -27,5 +27,13 @@ We can fix that by simply sorting the packets by time rather than the packet num
 After obtaining the correct order, we will use a filter to show only packets that were captured beginning with the relative time of 0
 
 ```shell
-frame.time_relative >= 0
+frame.time_relative >= 0 && tcp.len == 12
 ```
+
+This leaves us with only a few packets, that all contain a Bas64-Encoded payload. 
+To extract the payload, we will select the TCP Payload and press `CTRL + Shift + O`
+
+We can then copy the strings to Cyberchef and use the *From Base64* operation, to reveal the flag.
+
+> Using CyberChef I did not receive the finel closing tag for the flag
+> As I was at the end of my filtered packets I manually entered it, as this was probably the end of the important data stream
