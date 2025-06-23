@@ -1,0 +1,54 @@
+---
+layout: post
+title: BTLO - Meta
+categories:
+- BlueTeamLabsOnline
+- Investigation
+tags:
+- exiftool
+image: "/assets/img/newBTLO.png"
+---
+## Obtaining the files
+We start by downloading the `zip`-file and moving it to a dedicated directory for our
+investigations.
+We can also use `mv` to rename the file, to get a more memorable filename.
+After moving the file we use `7z x Meta.zip` to unzip the file and receive two image files.
+
+![Unzipped files](/assets/img/BTLOMeta/unzipped.png)
+*Unzipped files*
+
+## Exploring the metadata
+We will be using `exiftool` in combination with `grep` to answer the first three questions,
+using `grep -i` for every search pattern to ignore the case of our wanted pattern.
+
+We start by extracting the camera model using `exiftool upload* | grep -i camera`
+
+![Camera Model](/assets/img/BTLOMeta/CameraModel.png)
+*Revealing the Camera Model*
+
+Next we use `exiftool upload* | grep -i time` to find all entries that include the pattern
+"time".
+The timestamp we want is listed as "Date/Time Original"
+
+![Timestamp](/assets/img/BTLOMeta/Timestamp.png"
+*Extracting the date and time of the image creation*
+
+Last but not leas we use`exiftool upload* | grep - comment` to find the comment hidden in the
+metadata.
+
+![Comment](/assets/img/BTLOMeta/Comment.png)
+*Comment in the metadata*
+
+## Reverse Image Search
+To find the location where the images were taken we will be using Google's reverse image search.
+After looking at both images we will be using `uploaded_2.png` as this has more color and
+detail compared to `uploaded_1.JPG`.
+
+The results include an article of the [Independent](https://www.independent.co.uk/asia/china/china-daily/basantapur-palace-restoration-nepal-b2176321.html)
+That points us towards "The palace complex in the middle of Durbar Square".
+We can then go to Google Maps and search for "Durbar Square" and verify the City of
+REDACTED using Street View.
+
+![StreetView](/assets/img/BTLOMeta/StreetView.png)
+*Street View of Durbar Square*
+
