@@ -3,10 +3,10 @@ layout: post
 title: BTLO - Meta
 categories:
 - BlueTeamLabsOnline
-- Investigation
+- Forensics
 tags:
 - exiftool
-image: "/assets/img/newBTLO.png"
+image: "/assets/img/btlo.png"
 ---
 ## Obtaining the files
 We start by downloading the `zip`-file and moving it to a dedicated directory for our
