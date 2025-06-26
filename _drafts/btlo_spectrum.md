@@ -40,10 +40,8 @@ As the images provided no visual evidence I ran `exiftool` on all images and fou
 *The metadata reveals a steghide password*
 
 I took a closer look at all the images and noticed that image number 5 was slightly bigger. I expected to find something hidden here.
-After an initial `stegide extract -sf 00000004.jpg` was not successful I tried different alterations for the password using `stegseek` and
-a password list.
-After multiple attempts using all kinds of alterations on all carfved images I felt I was running into a dead end -- almost forgetting there was 
-something else that needed further analysis
+After an initial `stegide extract -sf 00000004.jpg` was not successful I tried different alterations for the password using `stegseek` and a password list.
+After multiple attempts using all kinds of alterations on all carfved images I felt I was running into a dead end -- almost forgetting there was something else that needed further analysis
 
 To extract the zip file i used `binwalk -e image.dd`. This gave me the zip file I tried to unzip using `7z`.
 
@@ -58,4 +56,37 @@ I then used `fcrackzip` in combination with `rockyou.txt` and was able to find a
 ![fcrackzip](/assets/img/BTLO_Spectrum/fcrack.png)
 
 I was able to extract the files from the archive using the found password and got the `wav` files.
-I then used a media player and listened to all the audio files, to see if this would lead anywhere. 
+I then used a media player and skipped through all the audio files, to see if this would lead anywhere. 
+
+The `location.wav` is an audio file that sounded like  morse code. To transcribe the code, I used a [spectrum visualizer](https://github.com/JulesInCyber/CTF-Related/blob/main/Tools/Blue/spectral.py). This made it easier to read the morse code and insert it into cyberchef.
+
+![Hidden Morse](/assets/img/BTLO_Spectrum/location.png)
+*The morse message visualized*
+
+
+```
+-. .. -.-. .
+- .-. -.-- --..--
+-. --- - .... .. -. --.
+- ---
+.... . .- .-. 
+.... . .-. . -.-.--
+```
+
+which translates to: *NICE TRY, NOTHING TO HEAR HERE!*
+
+After that I listened to all files again, thinking I must have missed something. 
+I listened to the `white.wav` first and was able to hear some kind of sound artifact. It was
+worth trying to visualize that audio file as well.
+
+![Spectograph of white.wav](/assets/img/BTLO_Spectrum/white.png)
+*Spectograph of white.wav*
+
+This looked a lot like coordinates. Which could be used to find the Location of the secret meeting.
+With only the time left to find, I came back to my notes and noticed I still had a stegseek password that was of no use so far.
+
+Using `steghide extract -sf white.wav` and the previously obtained password I was able to extract a file called `stardate.txt`.
+This file cointained a string that looked encoded.
+I used [this site](https://dcode.fr) to identify the encoding algorithm.
+It was likely Base58, so I was able to decode the message using CyberChef. 
+As the message ended in `emit`, which is *time* but backwards, I figured out how to interpret the message and was able to reveal the time of the meeting.
