@@ -58,3 +58,4 @@ I then used `fcrackzip` in combination with `rockyou.txt` and was able to find a
 ![fcrackzip](/assets/img/BTLO_Spectrum/fcrack.png)
 
 I was able to extract the files from the archive using the found password and got the `wav` files.
+I then used a media player and listened to all the audio files, to see if this would lead anywhere. 
