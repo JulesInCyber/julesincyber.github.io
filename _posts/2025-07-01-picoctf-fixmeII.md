@@ -1,9 +1,14 @@
 ---
 layout: post
 title: picoCTF - Fix Me 2
-categories: [picoCTF, Basic Skills]
-tags: [python, scripting]
+categories:
+- picoCTF
+- Basic Skills
+tags:
+- python
+- scripting
 image: assets/img/picoCTF.png
+date: 2025-07-01 14:54 +0200
 ---
 ## Description
 Fix the syntax error in this Python script to
