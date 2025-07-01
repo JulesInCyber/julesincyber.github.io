@@ -3,6 +3,7 @@ layout: post
 title: SUID Misconfiguration
 categories:
 - Know-How
+- Linux
 tags:
 - linux
 - security
