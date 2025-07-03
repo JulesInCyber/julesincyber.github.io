@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TryHackMe - /assets/img/THM_InvestigatingWindows/InvestigatingWindows
+title: TryHackMe - Investigating Windows
 categories:
 - TryHackMe
 - Forensics
