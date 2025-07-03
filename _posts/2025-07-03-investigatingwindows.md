@@ -8,6 +8,7 @@ tags:
 - windows
 - investigation
 image: assets/img/thm.png
+date: 2025-07-03 11:04 +0200
 ---
 ## Briefing
 A Windows machine has been hacked, it's your job to go investigate this machine and find clues to what the
