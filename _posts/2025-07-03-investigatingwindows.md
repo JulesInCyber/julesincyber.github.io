@@ -21,7 +21,7 @@ I will be using my local Kali VM and connect to the machine using `xfreedpr`
 xfreerdp /u:Administrator /p:letmein123! /v:<MACHINE-IP> /dynamic-resolution
 ```
 
-## /assets/img/THM_InvestigatingWindows/Investigating the System
+## Investigating the System
 
 ### Windows Version and Year
 I used PowerShell to get the needed information of the machine
