@@ -1,0 +1,2 @@
+# Nmap 7.95 scan initiated Thu Jul  3 22:05:16 2025 as: /usr/lib/nmap/nmap --privileged -sV -sC -oA futurevera.thm
+# Nmap done at Thu Jul  3 22:05:16 2025 -- 0 IP addresses (0 hosts up) scanned in 0.38 seconds
