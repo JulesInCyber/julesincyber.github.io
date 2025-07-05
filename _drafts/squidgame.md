@@ -20,4 +20,18 @@ not correct, I checked IMDB for trivia and had to learn that the number was edit
 I refined my Google search and looked for the original number and found it in a [Reddit-Post](https://www.reddit.com/r/squidgame/comments/qfbfhp/meaning_of_010034_number_on_business_card/).
 
 ## Extracting the hidden file
-As the next question was explicitly asking for an extracted file, I used `stegseek`
+As the next question was explicitly asking for an extracted file, I used `stegseek` in combination with `rockyou.txt` first. As this was not successfull, I crafted
+my own wordlist which looked like this:
+
+![My Wordlist](/assets/img/BTLO_SquidGame/wordlist.png)
+*My used wordlist*
+
+I was able to extract the hidden file using
+
+```shell
+stegseek Invitation\ Card.png --wordlist words.txt output
+```
+
+## Second File
+- zsteg fpr png/bmp
+
