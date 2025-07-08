@@ -8,6 +8,7 @@ tags:
 - ciphers
 - affine
 image: assets/img/picoCTF.png
+date: 2025-07-07 09:23 +0200
 ---
 ## Description
 Try to decrypt the secret cheese password to prove you're not the imposter!
