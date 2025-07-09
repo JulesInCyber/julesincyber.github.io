@@ -29,9 +29,14 @@ my own wordlist which looked like this:
 I was able to extract the hidden file using
 
 ```shell
-stegseek Invitation\ Card.png --wordlist words.txt output
+stegseek Invitation\ Card.png --wordlist wordlist.txt
 ```
 
 ## Second File
-- zsteg fpr png/bmp
+After `stegseek`successfully found the passphrase and extracted a file, I first ran `file` to see what I was dealing with.
+
+![File Type](/assets/img/BTLO_SquidGame/filetype.png)
+*File Type of the extracted file*
+
+As I am dealing with a `PNG` i started 
 
